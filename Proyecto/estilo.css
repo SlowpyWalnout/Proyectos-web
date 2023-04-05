@@ -12,9 +12,11 @@ body{
     display: flex;
     padding: 5 50px;
     justify-content: space-between;
-    border-radius: 40px;
     height: 80px;
 }
+.cabeza h1{
+    text-transform: uppercase;
+    font-weight: bolder;}
 header img{
     width: 60px;
     height: 60px;
@@ -24,14 +26,19 @@ header img{
     position: relative;
 }
 .counter {
-    position: absolute;
-    top: 0px;
-    right: 15px;
-    background-color: none;
+    position:absolute;
+    top: 10px;
+    right: 30px;
     color: black;
     padding: 5px;
     font-size: 18px;
-    font-family: "Trebuchet MS";
+    font-weight: bold;
+    background-color: #2A2F3C;
+    color: #ECEAE3;
+    border-radius: 50%;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
 }
 header *{
     display: inline;
@@ -97,6 +104,67 @@ footer{
     padding: 30px;
 }
 
+.dropdown-content{
+    display: none;
+    transform: translateX(-200px);
+
+    position: absolute;
+    background-color: #ECEAE3;
+    width: 320px;
+    min-height: 400px;
+    max-height: 800px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
+    border-radius: 20px;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+
+}
+#carrito-img{
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer; /*cuando se pasa el moouse por encima se cambia a la mano*/
+
+}
+.dropdown-content ul{
+    display: block;
+    display: grid;
+    grid-template-rows: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+
+
+}
+.dropdown-content ul img{
+    width: 60px;
+
+}
+
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+#button-comprar{
+    background-color: #2A2F3C;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: translateY(-15px);
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+button:hover{
+    cursor: pointer;
+}
 #logo-header{
     width: 60px;
     height: 60px;
