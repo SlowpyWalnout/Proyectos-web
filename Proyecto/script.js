@@ -1,17 +1,18 @@
-// Obtener el elemento del contador
-const contador = document.querySelector(".counter");
+// Obtener todos los botones de "Comprar"
+const botonesComprar = document.querySelectorAll('.incrementButton');
 
-// Obtener el botón de "Comprar"
-const botonComprar = document.querySelector(".incrementButton");
+// Obtener el contador de productos
+const contadorProductos = document.querySelector('.counter');
 
-// Agregar un event listener al botón que escucha el evento "click"
-botonComprar.addEventListener("click", function() {
-  // Obtener el valor actual del contador y convertirlo a número
-  let valorActual = parseInt(contador.textContent);
-  
-  // Agregar 1 al valor actual
-  valorActual++;
-  
-  // Actualizar el contenido del contador con el nuevo valor
-  contador.textContent = valorActual;
+// Inicializar el valor del contador en 0
+let contador = 0;
+
+// Agregar un evento click a cada botón de "Comprar"
+botonesComprar.forEach((boton) => {
+  boton.addEventListener('click', () => {
+    // Incrementar el contador
+    contador++;
+    // Actualizar el valor del contador
+    contadorProductos.textContent = contador;
+  });
 });
