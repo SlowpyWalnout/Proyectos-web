@@ -2,6 +2,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     list-style-type: none;
     transition: 0.2s;
+    border: solid black 1px;
 }
 body{
     background-color: #6B969D;
@@ -65,9 +66,11 @@ body{
 /* ========================================================================= */
 
 header{
+    /* position: fixed; */
     display: grid;
     grid-template-columns: 4fr 12fr 2fr 10px 2fr;
     height: 80px;
+    width: 100%;
     justify-items: center;
     align-items: center;
     background-color: #ECEAE3;
@@ -102,7 +105,7 @@ header{
     grid-template-columns: 100%;
     grid-template-rows: 100%;
     justify-content: center;
-    height: 1000px;
+    height: 600px;
 }
 .productos{
     width: 100%;
@@ -110,14 +113,15 @@ header{
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-items: stretch;
+    overflow: auto;
 }
 .producto{
     display: grid;
-    grid-template-rows: [row-1-inicio] 1fr [row-2-inicio] 1fr [row-3-fin];
+    grid-template-rows: [row-1-inicio] 1fr [row-2-fin];
     grid-template-columns: [col-1-inicio]1fr [col-2-inicio]1fr [col-3-fin];
     align-content: center;
     justify-content: center;
@@ -127,14 +131,18 @@ header{
 }
 .producto img{
     grid-column: col-1-inicio / col-2-inicio;
-    grid-row: row-1-inicio / row-3-fin;
+    grid-row: row-1-inicio / row-2-fin;
     justify-self: center;
     align-self: center;
+    height: 260px;
 }
 .producto p{
+    text-align: justify;
     justify-self: center;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
+    padding: 5px;
+
 }
 .producto button{
     justify-self:center;
@@ -142,11 +150,18 @@ header{
     padding: 15px;
     font-size: larger;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: translate(20px);
+}
+.producto button:hover{
+    transform: scale(1.2) translate(20px);
+
+
+
 }
 button:hover{
     cursor: pointer;
     transform: scale(1.2);
-    background-color: rgba(42, 47, 60, 0.8)
+    background-color: rgba(62, 69, 87, 1)
 }
 footer{
     background-color: #ECEAE3;
@@ -156,11 +171,7 @@ footer{
     justify-items: center;
     align-items: center;
 }
-footer p{
-}
-footer .redes-sociales{
 
-}
 button{
     padding: 2px;
     border-radius: 20px;
