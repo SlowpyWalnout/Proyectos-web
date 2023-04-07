@@ -8,69 +8,71 @@
     <header>
         <img src="img/logo.jpg" alt="logo" class="logo">
         <div class="nombre">PurffectAdmins</div>
-        <img src="img/bolsaCompra.png" alt="bolsa" class="listado-img">
+        <img onclick="showBag(this)" class="listado-img" src="img/bolsaCompra.png" alt="bolsa" >
         <div class="counter">0</div>
-        <div class="dropdown">
-            <button class="dropdown-btn">Bolsa de compras</button>
-            <div class="dropdown-content">
-                <a href="#">link 1</a>
-                <a href="#">link 2</a>
-                <a href="#">link 3</a>
+        <div class="dropdown" id="productos-id">
+            <p class="close-btn" onclick="closeBtn()">X</p>
+            <h3>Bolsa de compras</h3>
+            
+            <div class="elementos">
+                
+
             </div>
+            <h2>Total: $<strong class="precio-total">0</strong></h2>
         </div>
     </header>
 
     <section class="cuerpo">
         <div class="productos">
 
-            <div class="producto">
+            <div class="producto" id="1">
                 <img src="img/producto1.png" alt="producto-n">
                 <div class="Info-articulo">
-                    <h1>Peluche michi tierno disfrazado de tiburon.</h1>
+                    <h1 class="titulo">Peluche michi 1.</h1>
                     <br>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
                     <br>
                     <hr>
-                    $435.00
+                    435
                     <button class="incrementButton">Comprar</button>
                 </div>
             </div>
             
-            <div class="producto">
+            <div class="producto" id="2">
                 <img src="img/producto1.png" alt="producto-n">
                 <div class="Info-articulo">
-                    <h1>Peluche michi tierno disfrazado de tiburon.</h1>
+                    <h1 class="titulo">Peluche michi 2.</h1>
                     <br>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
                     <br>
                     <hr>
-                    $435.00
+                    435
                     <button class="incrementButton">Comprar</button>
                 </div>
             </div>
             
-            <div class="producto">
+            <div class="producto" id="3">
                 <img src="img/producto1.png" alt="producto-n">
                 <div class="Info-articulo">
-                    <h1>Peluche michi tierno disfrazado de tiburon.</h1>
+                    <h1 class="titulo">Peluche michi 3.</h1>
                     <br>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
                     <br>
                     <hr>
-                    $435.00
+                    435
                     <button class="incrementButton">Comprar</button>
                 </div>
             </div>
             
-            <div class="producto">
+            <div class="producto" id="4">
                 <img src="img/producto1.png" alt="producto-n">
                 <div class="Info-articulo">
-                    <h1>Peluche michi tierno disfrazado de tiburon.</h1>
+                    <h1 class="titulo">Peluche michi 4.</h1>
                     <br>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
                     <br>
                     <hr>
-                    $435.00
+                    435
                     <button class="incrementButton">Comprar</button>
                 </div>
             </div>
@@ -85,6 +87,14 @@
             REDES SOCIALES
         </div>
     </footer>
+    <script>
+        function showBag(x){
+            document.getElementById("productos-id").style.display = "block";
+        }
+        function closeBtn(){
+             document.getElementById("productos-id").style.display = "none";
+        }
+    </script>
     <script src="index.js"></script>
 </body>
 </html>
