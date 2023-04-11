@@ -1,39 +1,64 @@
-// Obtener todos los botones de incremento
-const incrementButtons = document.querySelectorAll('.incrementButton');
+// Obtener los elementos del DOM necesarios
+const elementosContainer = document.querySelector('.elementos');
+const counterElement = document.querySelector('.counter');
+const precioTotalElement = document.querySelector('.precio-total');
 
-// Agregar un evento de clic a cada botón de incremento
-incrementButtons.forEach(button => {
-  button.addEventListener('click', addToCart);
+// Definir variables de estado
+let contador = 0;
+let precioTotal = 0;
+
+// Función para agregar un producto
+function agregarProducto(event) {
+  // Obtener el producto y su precio
+  const producto = event.target.parentNode;
+  const precio = parseInt(producto.querySelector('p').innerText);
+
+  // Actualizar el contador y precio total
+  contador++;
+  precioTotal += precio;
+
+  // Actualizar los elementos del DOM
+  counterElement.innerText = contador;
+  precioTotalElement.innerText = precioTotal;
+
+  // Crear el elemento para el producto en la bolsa
+  const elementoProducto = document.createElement('div');
+  elementoProducto.classList.add('elemento-producto');
+
+  const nombreProducto = producto.querySelector('.titulo').innerText;
+
+  // Agregar el contenido del elemento
+  elementoProducto.innerHTML = `
+    <span class="nombre-producto">${nombreProducto}</span>
+    <span class="precio-producto">$${precio}</span>
+    <button class="eliminar-producto" onclick="eliminarProducto(event)">X</button>
+  `;
+
+  // Agregar el elemento a la bolsa
+  elementosContainer.appendChild(elementoProducto);
+}
+
+// Función para eliminar un producto
+function eliminarProducto(event) {
+  // Obtener el elemento del producto y su precio
+  const elementoProducto = event.target.parentNode;
+  const precio = parseInt(elementoProducto.querySelector('.precio-producto').innerText.slice(1));
+
+  // Actualizar el contador y precio total
+  contador--;
+  precioTotal -= precio;
+
+  // Actualizar los elementos del DOM
+  counterElement.innerText = contador;
+  precioTotalElement.innerText = precioTotal;
+
+  // Eliminar el elemento del producto de la bolsa
+  elementosContainer.removeChild(elementoProducto);
+}
+
+// Agregar el listener para los botones de comprar
+const botonesComprar = document.querySelectorAll('.incrementButton');
+botonesComprar.forEach((boton) => {
+  boton.addEventListener('click', agregarProducto);
 });
 
-// Función para agregar un producto al carrito
-function addToCart(event) {
-  // Obtener el producto seleccionado
-  const producto = event.target.parentNode.parentNode;
-  
-  // Crear un nuevo elemento para el carrito
-  const cartItem = document.createElement('div');
-  cartItem.classList.add('cart-item');
-  
-  // Agregar el título del producto al elemento del carrito
-  const cartItemTitle = document.createElement('h3');
-  cartItemTitle.innerText = producto.querySelector('.titulo').innerText;
-  cartItem.appendChild(cartItemTitle);
-  
-  // Agregar el precio del producto al elemento del carrito
-  const cartItemPrice = document.createElement('h4');
-  cartItemPrice.innerText = producto.querySelector('hr').nextSibling.textContent.trim();
-  cartItem.appendChild(cartItemPrice);
-  
-  // Agregar el elemento del carrito a la lista de elementos
-  const cartItemsList = document.querySelector('.elementos');
-  cartItemsList.appendChild(cartItem);
-  
-  // Actualizar el contador de elementos en el carrito
-  const cartCounter = document.querySelector('.counter');
-  cartCounter.innerText = parseInt(cartCounter.innerText) + 1;
-  
-  // Actualizar el precio total
-  const precioTotal = document.querySelector('.precio-total');
-  precioTotal.innerText = parseInt(precioTotal.innerText) + parseInt(cartItemPrice.innerText);
-}
