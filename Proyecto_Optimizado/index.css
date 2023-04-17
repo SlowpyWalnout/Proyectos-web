@@ -11,6 +11,14 @@ body{
 }
 
 
+button{
+    padding: 2px;
+    border-radius: 20px;
+    background-color: #2A2F3C;
+    color: #ECEAE3;
+    text-align: center;
+}
+
 .listado-img{
     width: 60px;
     height: 60px;
@@ -29,6 +37,8 @@ body{
     display: none;
     min-width: 250px;
     border-radius: 20px;
+    z-index: 9999;
+    max-height: 500px;
 }
 p.close-btn{
     position: absolute;
@@ -36,6 +46,11 @@ p.close-btn{
     right: 15px;
     cursor: pointer;
     color: #000;
+}
+.elementos{
+    overflow: auto;
+    max-height: 300px;
+
 }
 /* ========================================================================= */
 /* termina la funcion de dropdown */
@@ -53,6 +68,8 @@ p.close-btn{
 /*====================================================*/
 /*terminan las pruebas del menu desplegable*/
 /*====================================================*/
+
+
 header{
     /* position: fixed; */
     display: grid;
@@ -110,6 +127,10 @@ header{
     justify-items: stretch;
     overflow: auto;
 }
+.producto img{
+    width: 200px;
+    height: 100px;
+}
 .producto{
     display: grid;
     grid-template-rows: [row-1-inicio] 1fr [row-2-fin];
@@ -141,12 +162,10 @@ header{
     padding: 15px;
     font-size: larger;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transform: translate(20px);
+    transform: translate(50px, -60px);
 }
 .producto button:hover{
-    transform: scale(1.2) translate(20px);
-
-
+    transform: scale(1.2) translate(50px, -50px);
 
 }
 button:hover{
@@ -161,11 +180,4 @@ footer{
     grid-template-rows: 70px 30px 100px;
     justify-items: center;
     align-items: center;
-}
-
-button{
-    padding: 2px;
-    border-radius: 20px;
-    background-color: #2A2F3C;
-    color: #ECEAE3;
 }

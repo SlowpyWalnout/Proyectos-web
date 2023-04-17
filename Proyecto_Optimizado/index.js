@@ -31,7 +31,7 @@ function agregarProducto(event) {
   elementoProducto.innerHTML = `
     <span class="nombre-producto">${nombreProducto}</span>
     <span class="precio-producto">$${precio}</span>
-    <button class="eliminar-producto" onclick="eliminarProducto(event)">X</button>
+    <button class="eliminar-producto" onclick="eliminarProducto(event)">Eliminar</button>
   `;
 
   // Agregar el elemento a la bolsa
