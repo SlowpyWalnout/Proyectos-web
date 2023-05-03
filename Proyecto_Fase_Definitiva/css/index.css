@@ -1,0 +1,236 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    list-style-type: none;
+    transition: 0.2s;
+    /* esta vaina ayuda a visualizar como se acomoda la pagina. */
+    /* border: solid black 1px;*/
+}
+body{
+    background-color: #6B969D;
+    margin: 0px;
+}
+
+
+button{
+    padding: 2px;
+    border-radius: 20px;
+    background-color: #2A2F3C;
+    color: #ECEAE3;
+    text-align: center;
+}
+
+.listado-img{
+    width: 60px;
+    height: 60px;
+}
+/* ========================================================================= */
+/* comienza la funcion dropdown */
+/* ========================================================================= */
+
+.dropdown {
+    position: absolute!important;
+    top: 82px;
+    right: 15px;
+    background-color: #ECEAE3;
+    padding: 0 15px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    display: none;
+    min-width: 250px;
+    border-radius: 20px;
+    z-index: 9999;
+    max-height: 500px;
+}
+p.close-btn{
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    cursor: pointer;
+    color: #000;
+}
+.elementos{
+    overflow: auto;
+    max-height: 300px;
+
+}
+/* ========================================================================= */
+/* termina la funcion de dropdown */
+/* ========================================================================= */
+.listado-img{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.listado-img:hover{
+    margin-bottom: 16px;
+    transition-duration: .5s;
+}
+
+/*====================================================*/
+/*terminan las pruebas del menu desplegable*/
+/*====================================================*/
+
+
+header{
+    /* position: fixed; */
+    display: grid;
+    grid-template-columns: 4fr 12fr 2fr 10px 2fr;
+    height: 80px;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    background-color: #ECEAE3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.logo{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.nombre{
+    justify-self: start;
+    align-self: center;
+}
+.listado{
+    align-self: center;
+    text-align: center;
+}
+
+.counter{
+    background-color: #000000e0;
+    color: #ECEAE3;
+    border-radius: 50%;
+    padding: 5px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    transform: translate(-50px, -20px);
+}
+.cuerpo{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    justify-content: center;
+    height: 600px;
+}
+.productos{
+    width: 100%;
+    background-color: #BAC0C3;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: stretch;
+    overflow: auto;
+}
+.producto img{
+    width: 200px;
+    height: 100px;
+}
+
+.producto{
+    display: grid;
+    grid-template-rows: [row-1-inicio] 1fr [row-2-fin];
+    grid-template-columns: [col-1-inicio]1fr [col-2-inicio]1fr [col-3-fin];
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
+    background-color: #ECEAE3;
+    border-radius: 20px;
+}
+.producto img{
+    grid-column: col-1-inicio / col-2-inicio;
+    grid-row: row-1-inicio / row-2-fin;
+    justify-self: center;
+    align-self: center;
+    height: 260px;
+}
+.producto p{
+    text-align: justify;
+    justify-self: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+
+}
+.producto button{
+    justify-self:center;
+    align-self: center;
+    padding: 15px;
+    font-size: larger;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: translate(50px, -60px);
+}
+.producto button:hover{
+    transform: scale(1.2) translate(50px, -50px);
+
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: rgba(62, 69, 87, 1)
+}
+footer{
+    background-color: #ECEAE3;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 145px 30px 100px;
+    justify-items: center;
+    align-items: center;
+}
+.footer{
+	width:100%;
+	background-color:#ECEAE3;	
+}
+
+.footer .g1{
+	width:100%;
+	margin:auto;
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap:50px;
+	padding:45px 0px;
+}
+
+.footer .g1 .box figure{
+	width:100%;
+	height:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.footer .g1 .box figure img{
+	border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.footer .g1 .box h2{
+	color:#6B969D;
+	margin-bottom:25px;
+	font-size:20px;
+}
+
+.footer .g1 .box p{
+	color:black;
+	margin-bottom:10px;
+}
+
+.img1{
+	width:60px;
+	height:60px;
+}
+
+.img2{
+	width:80px;
+	height:68px;
+}
+
+.img3{
+	width:60px;
+	height:60px;
+}

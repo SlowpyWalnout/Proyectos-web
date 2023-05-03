@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <a href="PurrfectAdmins.html"><img src="img/logo.jpg" class="logo"></a>
+        <div class="nombre">PurffectAdmins</div>
+        <img onmouseover="showBag(this)" class="listado-img" src="img/bolsaCompra.png" alt="bolsa" >
+        <div class="counter">0</div>
+        <div class="dropdown" id="productos-id">
+            <p class="close-btn" onclick="closeBtn()">X</p>
+            <h3>Bolsa de compras</h3>
+            
+            <div class="elementos">    
+
+                
+            </div>
+            <h2>Total: $<strong class="precio-total">0</strong></h2>
+            <a href="Carrito.html"><button>Pagar</button></a>
+        </div>
+    </header>
+
+    <section class="cuerpo">
+        <div class="productos">
+
+            <div class="producto">
+                <img class="card-img-top" src="img/producto1.png" alt="producto-1">
+                <div class="Info-articulo">
+                    <h1 class="my-0">Peluche Michi-Tiburon</h1>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
+                    <br>
+                    <p class="card-title pricing-card-title precio">459</p>
+                    <button class="incrementButton" id="incrementButton1">Comprar</button>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <img src="img/producto2.jpg" alt="producto-2">
+                <div class="Info-articulo">
+                    <h1 class="titulo">Peluche Michi-Negro</h1>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
+                    <br>
+                    <p>339</p>
+                    <button class="incrementButton" id="incrementButton2">Comprar</button>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <img src="img/producto3.png" alt="producto-3">
+                <div class="Info-articulo">
+                    <h1 class="titulo">Peluches michis-admin</h1>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
+                    <br>
+                    <p>599</p>
+                    <button class="incrementButton" id="incrementButton3">Comprar</button>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <img src="img/producto4.png" alt="producto-4">
+                <div class="Info-articulo">
+                    <h1 class="titulo">Peluche Michi-Pollo</h1>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
+                    <br>
+                    <p>466</p>
+                    <button class="incrementButton" id="incrementButton4">Comprar</button>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <img src="img/producto5.png" alt="producto-5">
+                <div class="Info-articulo">
+                    <h1 class="titulo">Peluche Michi-Sushi</h1>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
+                    <br>
+                    <p>649</p>
+                    <button class="incrementButton" id="incrementButton5">Comprar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="img/producto6.png" alt="producto-6">
+                <div class="Info-articulo">
+                    <h1 class="titulo">Peluche Michi-Acostado Blanco</h1>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
+                    <br>
+                    <p>349</p>
+                    <button class="incrementButton" id="incrementButton6">Comprar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="img/producto7.png" alt="producto-7">
+                <div class="Info-articulo">
+                    <h1 class="titulo">Peluche Michi-Acostado Gris</h1>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
+                    <br>
+                    <p>349</p>
+                    <button class="incrementButton" id="incrementButton7">Comprar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="img/producto8.png" alt="producto-8">
+                <div class="Info-articulo">
+                    <h1 class="titulo">Peluche Michi-Fat</h1>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
+                    <br>
+                    <p>539</p>
+                    <button class="incrementButton" id="incrementButton8">Comprar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="img/producto9.png" alt="producto-9">
+                <div class="Info-articulo">
+                    <h1 class="titulo">Peluche Michi-Tapioca</h1>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
+                    <br>
+                    <p>400</p>
+                    <button class="incrementButton" id="incrementButton9">Comprar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="img/producto10.png" alt="producto-10">
+                <div class="Info-articulo">
+                    <h1 class="titulo">Peluche Michi-Largo</h1>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
+                    <br>
+                    <p>750</p>
+                    <button class="incrementButton" id="incrementButton10">Comprar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="img/producto11.png" alt="producto-11">
+                <div class="Info-articulo">
+                    <h1 class="titulo">Peluche Michi-Gris-Sentado</h1>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
+                    <br>
+                    <p>200</p>
+                    <button class="incrementButton" id="incrementButton11">Comprar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="img/producto12.png" alt="producto-12">
+                <div class="Info-articulo">
+                    <h1 class="titulo">Peluche Michi-Rosa</h1>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae consequatur fugit dolores doloremque sit facere exercitationem deserunt, odio quam tenetur, illum sequi provident! Ipsam, vero eos? Exercitationem, quisquam architecto.
+                    <br>
+                    <p>350</p>
+                    <button class="incrementButton" id="incrementButton12">Comprar</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+		<div class="g1">
+			<div class="box">
+				<figure>
+					<a href="#">
+						<a href="PurrfectAdmins.html"><img src="img/logo.jpg" class="logo"></a>
+					</a>
+				</figure>
+			</div>
+			<div class="box">
+				<h2>Acerca de Nosotros</h2>
+				<p>Lorem ipsum dolor sit amet consectetur, 
+                    adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+			</div>
+			<div class="box">
+				<h2>Redes Sociales</h2>
+				<div class="RedSocial">
+					<a href="#" ><img class="img1" src="img/l1.png"></a>
+					<a href="#" ><img class="img2" src="img/l2.png"></a>
+					<a href="#" ><img class="img3" src="img/l3.png"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+    <script>
+        function showBag(x){
+            document.getElementById("productos-id").style.display = "block";
+        }
+        function closeBtn(){
+             document.getElementById("productos-id").style.display = "none";
+        }
+    </script>
+    <script src="js/index.js"></script>
+</body>
+</html>

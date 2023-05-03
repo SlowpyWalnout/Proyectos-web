@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <a href="PurrfectAdmins.html"><img src="img/logo.jpg" class="logo"></a>
+        <div class="nombre">PurffectAdmins</div>
+        <img onmouseover="showBag(this)" class="listado-img" src="img/bolsaCompra.png" alt="bolsa" >
+        <div class="counter">0</div>
+        <div class="dropdown" id="productos-id">
+            <p class="close-btn" onclick="closeBtn()">X</p>
+            <h3>Bolsa de compras</h3>
+            
+            <div class="elementos">    
+
+                
+            </div>
+           
+            
+        </div>
+    </header>
+
+    <section class="cuerpo">
+            <div class="producto">
+                
+                <img src="img/michi.jpg" alt="producto-1">
+                <div class="Info-articulo">
+                    <br><br><br><br><br>
+                    <h1 class="titulo">Muchas gracias por su compra, su pedido esta siendo enviado.</h1>
+                    <h1 class="titulo">La factura sera enviada a su correo asi como el código de rastreo.</h1>
+                    <br><br><br><br><br>
+                    <a href="PurrfectAdmins.html" style="text-align: center;"><button>Regresar al inicio</button></a>
+            </div>
+    </section>
+    <footer class="footer">
+		<div class="g1">
+			<div class="box">
+				<figure>
+					<a href="#">
+						<a href="PurrfectAdmins.html"><img src="img/logo.jpg" class="logo"></a>
+					</a>
+				</figure>
+			</div>
+			<div class="box">
+				<h2>Acerca de Nosotros</h2>
+				<p>Lorem ipsum dolor sit amet consectetur, 
+                    adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+			</div>
+			<div class="box">
+				<h2>Redes Sociales</h2>
+				<div class="RedSocial">
+					<a href="#" ><img class="img1" src="img/l1.png"></a>
+					<a href="#" ><img class="img2" src="img/l2.png"></a>
+					<a href="#" ><img class="img3" src="img/l3.png"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+    <script>
+        function showBag(x){
+            document.getElementById("productos-id").style.display = "block";
+        }
+        function closeBtn(){
+             document.getElementById("productos-id").style.display = "none";
+        }
+    </script>
+    <script src="js/index.js"></script>
+</body>
+</html>
