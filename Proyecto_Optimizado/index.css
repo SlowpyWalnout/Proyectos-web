@@ -3,7 +3,7 @@
     list-style-type: none;
     transition: 0.2s;
     /* esta vaina ayuda a visualizar como se acomoda la pagina. */
-    /* border: solid black 1px;*/
+    /* border: solid black 1px; */
 }
 body{
     background-color: #6B969D;
@@ -32,9 +32,12 @@ button{
     top: 82px;
     right: 15px;
     background-color: #ECEAE3;
-    padding: 0 15px;
+    padding:15px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
-    display: none;
+    display: none, grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
     min-width: 250px;
     border-radius: 20px;
     z-index: 9999;
@@ -181,3 +184,25 @@ footer{
     justify-items: center;
     align-items: center;
 }
+.listado{
+    display: grid;
+
+    width: 9fr;
+    height: 80%;
+    background-color: white;
+    margin: 40px;
+    border-radius: 20px;
+    
+    padding: 30px;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    justify-items: center;
+    align-items: center;
+}
+.cuerpo-listado{
+    margin: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+}
+
