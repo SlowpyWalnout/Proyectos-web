@@ -1,3 +1,6 @@
+//arreglo de productos de la bolsa
+const itemsBolsa = []
+
 // Obtener los elementos del DOM necesarios
 const elementosContainer = document.querySelector('.elementos');
 const counterElement = document.querySelector('.counter');
@@ -12,6 +15,10 @@ function agregarProducto(event) {
   // Obtener el producto y su precio
   const producto = event.target.parentNode;
   const precio = parseInt(producto.querySelector('p').innerText);
+  const nombre = producto.querySelector('h1').innerText;
+  
+  //agregar producto a el arreglo de productos
+  itemsBolsa.push({nombre, precio})
 
   // Actualizar el contador y precio total
   contador++;
@@ -36,6 +43,9 @@ function agregarProducto(event) {
 
   // Agregar el elemento a la bolsa
   elementosContainer.appendChild(elementoProducto);
+
+  // agregar producto al local storage
+  this.guardarProductosLocalStorage(producto);
 }
 
 // Función para eliminar un producto
@@ -54,6 +64,9 @@ function eliminarProducto(event) {
 
   // Eliminar el elemento del producto de la bolsa
   elementosContainer.removeChild(elementoProducto);
+
+  //eliminar el elemento del producto del local storage
+  this.eliminarProductoLocalStorage(productoID);
 }
 
 // Agregar el listener para los botones de comprar
