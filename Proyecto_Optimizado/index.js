@@ -62,3 +62,8 @@ botonesComprar.forEach((boton) => {
   boton.addEventListener('click', agregarProducto);
 });
 
+const miBoton = document.getElementById("miBoton");
+
+miBoton.addEventListener("click", function() {
+  alert("¡Compra realizada con exito!");
+});
